@@ -1,0 +1,47 @@
+body {
+    background-color: #F3F4F6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Customização da barra de rolagem */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F3F4F6;
+}
+::-webkit-scrollbar-thumb {
+    background: #D1D5DB;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #000000;
+}
+
+/* Efeitos suaves para os cards */
+.card-hover {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo do cartão de crédito virtual */
+.credit-card-bg {
+    background: linear-gradient(135deg, #1f2937 0%, #000000 100%);
+    position: relative;
+    overflow: hidden;
+}
+.credit-card-bg::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
